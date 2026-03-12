@@ -32,4 +32,6 @@ while True:
             distance -= 1
             speed_lead +=1
             print(f"Accel: Ego={ego_speed}, lead = {speed_lead}, Dist={distance}")
+
+        
     time.sleep(1)  # Slow for visibility
