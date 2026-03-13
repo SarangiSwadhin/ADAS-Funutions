@@ -6,7 +6,7 @@ from ultralytics import YOLO
 ##Frame by frame start reading the video and displaying it
 model = YOLO('yolov8n.pt')
 
-vid = cv2.VideoCapture("vid_2.mp4")
+vid = cv2.VideoCapture("vid.mp4")
 if vid.isOpened() == False:
     print("The video is not opening")
 
