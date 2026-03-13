@@ -45,7 +45,7 @@ while True:
 
 ##Marking the region on intrets(ROI)
     mask = np.zeros_like(vid_edge) ##Creates a black frame of the same size as that of the vid_edge
-    polygon = np.array([[(70,720),(750,400),(1280,720)]], np.int32)
+    polygon = np.array([[(70,720),(700,400),(1280,720)]], np.int32)
     cv2.fillPoly(mask, polygon, 255)
     vid_roi = cv2.bitwise_and(mask, vid_edge)
 
