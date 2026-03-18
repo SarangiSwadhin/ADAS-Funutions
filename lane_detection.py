@@ -15,7 +15,7 @@ import numpy as np
 image = cv2.imread("image.jpg")
 image_resize = cv2.resize(image, (4096, 2160))
 (h,w,r) = image.shape
-
+ 
 image_blurred = cv2.GaussianBlur(image_resize, (5,5),0)
 print(f"height {h}. width {w}, channels {r} dimensions of the normal image")
 
@@ -60,33 +60,33 @@ for x1,y1,x2,y2 in left_lines:
 for x1,y1,x2,y2 in right_lines:
     cv2.line(image_resize, (x1,y1),(x2,y2),(0,255,0),5)
 
-plt.figure(figsize=(35,5))
+# plt.figure(figsize=(35,5))
 
-plt.subplot(1,7,1)
-plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
-plt.title("orginal image")
+# plt.subplot(1,7,1)
+# plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+# plt.title("orginal image")
 
-plt.subplot(1,7,2)
-plt.imshow(cv2.cvtColor(image_blurred, cv2.COLOR_BGR2RGB))
-plt.title("gaussian blur image")
+# plt.subplot(1,7,2)
+# plt.imshow(cv2.cvtColor(image_blurred, cv2.COLOR_BGR2RGB))
+# plt.title("gaussian blur image")
 
-plt.subplot(1,7,3)
-plt.imshow(grey_scaleing, cmap ='gray')
-plt.title("grey scaled image")
+# plt.subplot(1,7,3)
+# plt.imshow(grey_scaleing, cmap ='gray')
+# plt.title("grey scaled image")
 
-plt.subplot(1,7,4)
-plt.imshow(edge_detection)
-plt.title("Canny edge detection")
+# plt.subplot(1,7,4)
+# plt.imshow(edge_detection)
+# plt.title("Canny edge detection")
 
-plt.subplot(1, 7, 5)
-plt.imshow(roi_edges, cmap='gray')
-plt.title("ROI Edges")
+# plt.subplot(1, 7, 5)
+# plt.imshow(roi_edges, cmap='gray')
+# plt.title("ROI Edges")
 
-plt.subplot(1,7,6)
-plt.imshow(cv2.cvtColor(lane_image, cv2.COLOR_BGR2RGB))
-plt.title("Hough Lane Detection")
+# plt.subplot(1,7,6)
+# plt.imshow(cv2.cvtColor(lane_image, cv2.COLOR_BGR2RGB))
+# plt.title("Hough Lane Detection")
 
-plt.subplot(1,7,7)
+# plt.subplot(1,7,7)
 plt.imshow(cv2.cvtColor(image_resize, cv2.COLOR_BGR2RGB))
 plt.title("final image")
 
